@@ -1,0 +1,123 @@
+.ContainerProfile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+    margin-top: 30px;
+}
+
+.cardProfile {
+    width: 280px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 1px white;
+    padding-bottom: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.tituloSaludo {
+    width: 100%;
+    margin: 3% 0 3% 0;
+    color: var(--color5);
+    text-align: center;
+}
+
+.option-selected {
+    background-color: rgb(134, 224, 134);
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.details-card{
+    background-color: var(--color4);
+    margin-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+    border-radius: 10px;
+}
+
+.recommendations-card{
+    background-color: var(--color4);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 97%;
+    border-radius: 10px;
+}
+/* boton de edit */
+#btnEdit {
+    appearance: none;
+    background-color: var(--color5);
+    border: 0.125em solid var(--color1);
+    border-radius: 0.9375em;
+    box-sizing: border-box;
+    color: var(--color3);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 20px;
+    min-height: 3.75em;
+    min-width: 0;
+    outline: none;
+    padding: 1em 2.3em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    grid-area: btn;
+}
+
+#btnEdit:disabled {
+    pointer-events: none;
+}
+
+#btnEdit:hover {
+    color: var(--color5);
+    background-color: var(--color3);
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+#btnEdit:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.input-title{
+    margin-bottom: -10px;
+}
+
+/* formulario */
+.login-title {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    box-shadow: 0px 0px 5px 1px white;
+    width: 400px;
+    margin: 2%;
+    padding: 15px;
+}
+
+.loginForm {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 80px 80px;
+    column-gap: 10%;
+    row-gap: 15px;
+    justify-items: center;
+    grid-template-areas:
+        "input1 input2"
+        "input3 input4"
+        "btn btn";
+}

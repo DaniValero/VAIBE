@@ -1,0 +1,27 @@
+:root{
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+  background: var(--colorFondo);
+  background: linear-gradient(45deg, var(--colorFondo) 13%, var(--miPurpura) 96%) no-repeat;
+
+}
+
+@media screen and (max-width: 769px){
+
+  body {
+    width: auto;
+    height: 120%;
+    background: var(--colorFondo);
+    background: linear-gradient(45deg, var(--colorFondo) 13%, var(--miPurpura) 96%) no-repeat;
+  
+  }
+}

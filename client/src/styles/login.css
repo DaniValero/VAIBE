@@ -1,0 +1,192 @@
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+h1 {
+    color: white;
+    width: fit-content;
+}
+
+.inputbox {
+    position: relative;
+    width: 196px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: var(--color3);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.inputbox.emailinput {
+    margin-bottom: 15px;
+}
+
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0);
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.inputbox input:valid~span,
+.inputbox input:focus~span {
+    color: var(--color4);
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0, 75em;
+}
+
+.inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color4);
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.inputbox input:valid~i,
+.inputbox input:focus~i {
+    height: 44px;
+}
+
+.login-form {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formRegister {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* display: grid;
+    grid-template-columns: 45%;
+    grid-template-rows: 80px;
+    column-gap: 10%;
+    row-gap: 15px;
+    justify-items: center;
+    grid-template-areas:
+        "email pass"
+        "btn btn"; */
+}
+
+.btnCont {
+    display: flex;
+    justify-content: center;
+}
+
+/* .emailInput {
+    grid-area: email;
+}
+
+.passInput {
+    grid-area: pass;
+}
+
+#buttonRegister {
+    grid-area: btn;
+} */
+
+.sendButton {
+    position: relative;
+    width: 150px;
+    border: none;
+    background: var(--color5);
+    color: var(--color1);
+    margin-top: 25px;
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: var(--color3) 0px 5px 2px, #000 0px 8px 5px;
+    cursor: pointer;
+}
+
+.sendButton:hover {
+    opacity: 0.6;
+}
+
+/* select */
+.box select {
+    background-color: var(--color4);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    /* -webkit-appearance: button; */
+    /* appearance: button; */
+    outline: none;
+    margin-top: 35px;
+}
+
+.box::before {
+    /* content: "\f13a"; */
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+    padding: 30px;
+}
+
+/* link a registro */
+.registro-link-wrapper {
+    color: white;
+    margin-top: 75px;
+    text-align: center;
+}
+
+.registro-link {
+    color: var(--color3);
+}
