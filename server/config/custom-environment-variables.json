@@ -1,4 +1,4 @@
 {
-  "jwtPrivateKey": "VIBE.AI_JWT_KEY",
+  "jwtPrivateKey": "VAIBE_JWT_KEY",
   "db": "MONGO_URI"
 }
