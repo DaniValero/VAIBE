@@ -14,7 +14,7 @@ router.put('/edit/:email', async (req, res) => {
   winston.info(`Usuario editado: ${req.params.email}`)
 })
 
-// AÑADIR BUSQUEDAS REALIZADAS EN LA WEB 
+// AÑADIR BUSQUEDAS REALIZADAS EN LA v1
 
 router.put('/add-recommendation/:email', async (req, res) => {
   console.log(req.body)
