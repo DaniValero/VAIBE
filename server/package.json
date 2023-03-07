@@ -21,6 +21,7 @@
     "jsonwebtoken": "^9.0.0",
     "lodash": "^4.17.21",
     "mongoose": "^6.8.3",
+    "openai": "^3.2.1",
     "winston": "^3.8.2",
     "winston-mongodb": "^5.1.0"
   }
