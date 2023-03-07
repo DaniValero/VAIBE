@@ -84,13 +84,7 @@ const reqSchema = Joi.object({
     .messages({ "any.required": `Invalid or incomplete email` }),
     password: Joi.string()
     .required()
-    .messages({ "any.required": `Invalid or incomplete password` }),
-    age: Joi.number()
-    .messages({ "any.required": `Age is required` }),
-    gender: Joi.string()
-    .messages({ "any.required": `Gender is required` }),
-    occupation: Joi.string()
-    .messages({ "any.required": `Occupation is required` })
+    .messages({ "any.required": `Invalid or incomplete password` })
 })
 
 exports.User = User;
