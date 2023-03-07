@@ -48,18 +48,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    age: {
-        type: Number,
-        required: true,
-    },
-    gender: {
-        type: String,
-        required: true,
-    },
-    occupation: {
-        type: String,
-        required: true,
-    },
     data: [dataSchema],
     data2: [dataSchema2]
 
@@ -96,13 +84,7 @@ const reqSchema = Joi.object({
     .messages({ "any.required": `Invalid or incomplete email` }),
     password: Joi.string()
     .required()
-    .messages({ "any.required": `Invalid or incomplete password` }),
-    age: Joi.number()
-    .messages({ "any.required": `Age is required` }),
-    gender: Joi.string()
-    .messages({ "any.required": `Gender is required` }),
-    occupation: Joi.string()
-    .messages({ "any.required": `Occupation is required` })
+    .messages({ "any.required": `Invalid or incomplete password` })
 })
 
 exports.User = User;

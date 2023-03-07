@@ -21,6 +21,6 @@ module.exports = function () {
         new winston.transports.File({ filename: 'logs/exceptions.log', exitOnError: true })
     );
     
-    winston.add(new winston.transports.MongoDB({db: process.env.MONGO_URI, collection : 'log_Vibe.AI',
+    winston.add(new winston.transports.MongoDB({db: process.env.MONGO_URI, collection : 'log_VAIBE_ERRORS',
     level : 'error'}));
 }
