@@ -4,7 +4,7 @@ const router = express.Router()
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
 
-    apiKey: "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",
+    apiKey: "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",
 
 });
 const openai = new OpenAIApi(configuration);
@@ -12,6 +12,7 @@ const openai = new OpenAIApi(configuration);
 
 
 router.post('/', async (req, res) => {
+    
     try {
         const response = await openai.createCompletion({
             model: "text-davinci-003",
