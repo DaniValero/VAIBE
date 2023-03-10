@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import user from "../services/userService"
 import axios from 'axios'
-
 import "../styles/profile.css"
 
 const EditUserForm = () => {
@@ -13,6 +12,21 @@ const EditUserForm = () => {
     const users = user.getCurrentUser().data
     const users2 = user.getCurrentUser().data2
     const username = user.getCurrentUser()
+    const [profile, setProfile] = useState({})
+
+
+    useEffect(() => {
+
+        const getBusquedas = async () => {
+        await axios.get(`http://localhost:3000/user/get/${user.getCurrentUser().email}`)
+          .then((response) => setProfile(response.data))
+          .catch((error) => {
+              console.error('Error:', error);
+          })
+        }
+        getBusquedas()
+      
+      }, [])
 
     const handleForm = async (e) => {
         e.preventDefault()
@@ -48,8 +62,8 @@ const EditUserForm = () => {
             <div>
 
             { (!username.data.length && !username.data2.length) 
-             ? <h1 className='tituloSaludo'>Hey, {username.username}, No recent recommendations...</h1>
-             : <h1 className='tituloSaludo'>Hey, {username.username}, these are your recent recommendations:</h1>                         
+             ? <h1 className='tituloSaludo'>Hello, {username.username}, there are no recent recommendations...</h1>
+             : <h1 className='tituloSaludo'>Hello, {username.username}, these are your recent recommendations:</h1>                         
             }
                 <div className='ContainerProfile'>
                 {users2.reverse().map((e) => (
