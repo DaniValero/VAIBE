@@ -44,7 +44,6 @@ const SignUp = () => {
                 setRecomendacion1(data.recommendations[0].artist)
                 setRecomendacion2(data.recommendations[1].artist)
                 setRecomendacion3(data.recommendations[2].artist)
-                console.log(recomendacion1)
             })
             .catch((error) => {
                 console.error('Error:', error);
@@ -52,49 +51,26 @@ const SignUp = () => {
         }
     }
 
-    // const handleRecommendation = async (e) => {
+    const handleRecommendation = async (e) => {
 
-    //     axios.put(`http://localhost:3000/user/add-recommendation/${user.getCurrentUser().email}`,
-    //     {
-    //         grupo1: grupo1,
-    //         grupo2: grupo2,
-    //         recomendacion1: recomendacion1,
-    //         recomendacion2: recomendacion2,
-    //         recomendacion3: recomendacion3,
-    //         opinion: e.currentTarget.value
-    //     })
-    //     .then((data) => {
-    //         console.log('Success:', data);
-    //     })
-    //     .catch((error) => {
-    //         console.error('Error:', error);
-    //     })
+        axios.put(`http://localhost:3000/user/add-recommendation/${user.getCurrentUser().email}`,
+        {
+            grupo1: grupo1,
+            grupo2: grupo2,
+            recomendacion1: recomendacion1,
+            recomendacion2: recomendacion2,
+            recomendacion3: recomendacion3,
+            opinion: e.currentTarget.value
+        })
+        .then((data) => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        })
 
-    //     fetch(`http://musicrec-env.eba-tvtntc4p.us-east-1.elasticbeanstalk.com/bbdd`,
-
-    //         {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({
-    //                 _id: user.getCurrentUser()._id,
-    //                 username: user.getCurrentUser().username,
-    //                 email: user.getCurrentUser().email,
-    //                 sexo: user.getCurrentUser().gender,
-    //                 ocupacion: user.getCurrentUser().occupation,
-    //                 data: user.getCurrentUser().data[user.getCurrentUser().data.length]
-    //             }),
-    //         })
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             console.log('Success:', data);
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error:', error);
-    //         })
-    //     window.location.reload()
-    // }
+        window.location.reload()
+    }
 
     return (
         <>
@@ -120,11 +96,11 @@ const SignUp = () => {
 
            
             {
-                recomendacion3 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />
+                recomendacion3 !== "" && recomendacion2 !== "" && recomendacion1 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />
             }
 
          
-{/* 
+
             {
                 recomendacion3 && <div className="likeordislike">
                     <button className="like btnLike" onClick={(e) => handleRecommendation(e)} value="true">
@@ -134,7 +110,7 @@ const SignUp = () => {
                         <svg height="24" width="24" xmlns={"../assets/wrong.svg"} viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" /></svg>
                     </button>
                 </div>
-            } */}
+            }
 
         </>
     );
