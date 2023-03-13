@@ -25,8 +25,8 @@ const EditUserForm = () => {
           })
         }
         getBusquedas()
-      
-      }, [])
+        
+    }, [])
 
     const handleForm = async (e) => {
         e.preventDefault()
@@ -82,7 +82,7 @@ const EditUserForm = () => {
                         </div>
                     ))}
 
-                    {users.reverse().map((e) => (
+                    {profile.data? profile.data.reverse().map((e) => (
                         <div className='cardProfile'>
                             <h3 className='details-card'>Artist/Bands</h3>
                             <h4>1: {e.grupo1}</h4>
@@ -92,7 +92,7 @@ const EditUserForm = () => {
                             <h4> 2: {e.recomendacion2}</h4>
                             <h4> 3: {e.recomendacion3}</h4>
                         </div>
-                    ))}
+                    )) : "Loading..."}
                 </div>
 
             </div>

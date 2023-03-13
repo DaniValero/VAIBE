@@ -34,7 +34,8 @@ const SignUp = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    "text": `Act as an API music recommender. I will provide you with artist or bands and you will recommend 3 artist that are very similar to all the artist I give you and not very popular. Avoid artists that have same name as the ones I give you. Reply JSON format with the main property named recommendations. My first request is nas and method man and the language must be English.`
+                    "text": `Act as an API music recommender. I will provide you with artist or bands and you will recommend 3 artist that are very similar to all the artist I give you and not very popular. Avoid artists that have same name as the ones I give you. Reply JSON format with the main property named recommendations. My first request is ${grupo1} and ${grupo2} and the language must be English.`
+
                 }),
             })
             .then((response) => response.json())
@@ -53,7 +54,7 @@ const SignUp = () => {
 
     const handleRecommendation = async (e) => {
 
-        axios.put(`http://localhost:3000/user/add-recommendation/${user.getCurrentUser().email}`,
+        await axios.put(`http://localhost:3000/user/add-recommendation/${user.getCurrentUser().email}`,
         {
             grupo1: grupo1,
             grupo2: grupo2,
@@ -68,6 +69,7 @@ const SignUp = () => {
         .catch((error) => {
             console.error('Error:', error);
         })
+        console.log(user.getCurrentUser().email)
 
         window.location.reload()
     }
