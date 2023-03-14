@@ -23,7 +23,7 @@ function Navbar() {
                             {
                                 auth.isAuth ?
                                     <>
-                                        <li><NavLink id='navbar' className="nav-link" to="/v2">Home</NavLink></li>
+                                        <li><NavLink id='navbar' className="nav-link" to="/home">Home</NavLink></li>
                                         <li><NavLink id='navbar' className="nav-link" to="/profile">My profile</NavLink></li>
                                     </>
                                     :
