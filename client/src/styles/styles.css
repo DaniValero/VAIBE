@@ -5,10 +5,10 @@
     color: var(--color1);
     --main-bg-color: #181629;
     --color1: #140F07;
-    --color2: #0E2951;
-    --color3: #3561B9;
-    --color4: #76A6FE;
-    --color5: #CEF2F7;
+    --color2: #5f7162;
+    --color3: #35b937;
+    --color4: #76fe8f;
+    --color5: #cef7dc;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
     /* justify-content: center; */
     align-items: center;
     height: 100vh;
-    background-image: url(../assets/landing_bg.png);
+    background-image: url(../assets/landing_bg_nuevo.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* background-attachment: fixed; */
@@ -88,9 +88,9 @@ body {
 
 /* logo */
 #logoLanding {
-    width: 10%;
+    width: 250px;
     position: absolute;
-    top: 10%;
+    top: 2%;
     right: 5%;
 }
 
