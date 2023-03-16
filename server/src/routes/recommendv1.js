@@ -1,7 +1,11 @@
 const express = require('express')
 const winston = require('winston')
 const router = express.Router()
+<<<<<<< HEAD
 const config = require("config")
+=======
+const config = require("config");
+>>>>>>> 2f4c5f4b6b90191adc8dc4ba358e4e0dc7dc9fcb
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
 
