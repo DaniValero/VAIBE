@@ -91,7 +91,11 @@ const SignUp = () => {
         event >= 48 && event < 78 && setPopularity("quite popular")
         event >= 78 && event <= 100 && setPopularity("mainstream")
     }
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> 2f4c5f4b6b90191adc8dc4ba358e4e0dc7dc9fcb
     return (
         <>
             <div className='login-wrapper'>
@@ -120,8 +124,16 @@ const SignUp = () => {
             searching === true && <Spinner loadingText='Let the AI think about it ...' />
             }
 
+<<<<<<< HEAD
+           
+            {recomendacion3 !== "" && recomendacion2 !== "" && recomendacion1 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />}
+
+         
+
+=======
             {recomendacion3 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />}
     
+>>>>>>> 2f4c5f4b6b90191adc8dc4ba358e4e0dc7dc9fcb
             {
                 recomendacion3 && <div className="likeordislike">
                     <button className="like btnLike" onClick={(e) => handleRecommendation(e)} value="true">
