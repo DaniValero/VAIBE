@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import AuthConsumer from '../hooks/useAuth'
 
-import "../styles/styles.css"
-import logo3 from '../assets/imgs/Logo_3.png'
+import "../styles/landing_styles.css"
 import logoVideo from '../assets/VAIBE_logo_video.mp4'
 
 
@@ -14,14 +13,13 @@ const LandingPage = () => {
         <>
             <div className='allLanding'>
                 <div className='bodyLanding'>
-                    {/* <img src={logoVideo} alt='vibeAI' id='logoLanding'></img> */}
                     <video src={logoVideo} autoPlay muted playsInline onEnded={(e) => {e.target.pause()}} id="logoLanding"></video>
                     <div className='cardLanding'>
-                        <h1 className='title'>The final Music Recommendation System</h1>
+                        <h1 className='title'>The AI powered Recommendation System</h1>
                         <br></br>
                         <p className='text'>
                             Ready to find what you were looking for?<br></br><br></br>
-                            With VibeAI you will find those music groups that you once listened to but didn't know
+                            With VAIBE you will find those music groups that you once listened to but didn't know
                             what they were called. Those songs that remind you of those bands you like so much.<br></br><br></br>
                             We are ready to blow your mind.
                             And you, are you ready?
