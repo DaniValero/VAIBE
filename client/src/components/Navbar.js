@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import AuthConsumer from "../hooks/useAuth";
 
 import "../styles/navbar.css"
-import logo from "../assets/VAIBE (390 × 200 px).svg"
+import logo from "../assets/VAIBElogo.svg"
 
 function Navbar() {
     const [clicked, setClicked] = useState(false)

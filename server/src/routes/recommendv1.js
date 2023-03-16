@@ -1,10 +1,11 @@
 const express = require('express')
 const winston = require('winston')
 const router = express.Router()
+const config = require("config");
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
 
-    apiKey: "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",
+    apiKey: config.get("openai"),
 
 });
 const openai = new OpenAIApi(configuration);
