@@ -28,34 +28,34 @@ const EditUserForm = () => {
         
     }, [])
 
-    const handleForm = async (e) => {
-        e.preventDefault()
+    // const handleForm = async (e) => {
+    //     e.preventDefault()
 
-        newPassword === "" && toast.warning("Password is required")
-        newPassword !== newPassword2 && toast.warning("Passwords must match!")
+    //     newPassword === "" && toast.warning("Password is required")
+    //     newPassword !== newPassword2 && toast.warning("Passwords must match!")
 
-        newUsername === "" && setNewUsername(user.getCurrentUser().username)
-        newEmail === "" && setNewEmail(user.getCurrentUser().email)
+    //     newUsername === "" && setNewUsername(user.getCurrentUser().username)
+    //     newEmail === "" && setNewEmail(user.getCurrentUser().email)
 
-        fetch(`http://localhost:3000/user/edit/${user.getCurrentUser().email}`,
-            {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    username: newUsername,
-                    email: newEmail
-                }),
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log('Success:', data) && toast.info("Account information updated successfully")
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            })
-    }
+    //     fetch(`http://localhost:3000/user/edit/${user.getCurrentUser().email}`,
+    //         {
+    //             method: 'PUT',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({
+    //                 username: newUsername,
+    //                 email: newEmail
+    //             }),
+    //         })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             console.log('Success:', data) && toast.info("Account information updated successfully")
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error:', error);
+    //         })
+    // }
 
     return (
         <>
@@ -96,7 +96,7 @@ const EditUserForm = () => {
                 </div>
 
             </div>
-            <div className='login-wrapper'>
+            {/* <div className='login-wrapper'>
                 <h2 className='login-title'>Edit your information:</h2>
                 <form className='inputbox loginForm'>
                     <div className="inputbox">
@@ -128,7 +128,7 @@ const EditUserForm = () => {
                     </button>
                 </form>
 
-            </div>
+            </div> */}
 
         </>
     );

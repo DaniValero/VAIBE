@@ -15,7 +15,7 @@ function Navbar() {
         <>
             <nav className="nav">
                 <div className="logo">
-                    <NavLink to="/v2"><img src={logo} className="App-logo" alt="Logo" />
+                    <NavLink to="/"><img src={logo} className="App-logo" alt="Logo" />
                     </NavLink>
                 </div>
                     <div id='menuList'>
