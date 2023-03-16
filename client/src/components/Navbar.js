@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import AuthConsumer from "../hooks/useAuth";
 
 import "../styles/navbar.css"
-import logo from "../assets/logo_sin_texto.png"
-import text from "../assets/TEXTO_LOGO.png"
+import logo from "../assets/VAIBE (390 × 200 px).svg"
 
 function Navbar() {
     const [clicked, setClicked] = useState(false)
@@ -16,8 +15,7 @@ function Navbar() {
         <>
             <nav className="nav">
                 <div className="logo">
-                    <NavLink to="/v2"><img src={logo} className="App-logo" alt="Logo" />
-                    <img src={text} className="text-logo" alt="VIBE.AI" />
+                    <NavLink to="/"><img src={logo} className="App-logo" alt="Logo" />
                     </NavLink>
                 </div>
                     <div id='menuList'>

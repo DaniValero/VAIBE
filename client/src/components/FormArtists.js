@@ -16,6 +16,8 @@ const SignUp = () => {
     const [recomendacion1, setRecomendacion1] = useState("")
     const [recomendacion2, setRecomendacion2] = useState("")
     const [recomendacion3, setRecomendacion3] = useState("")
+    const [similarity, setSimilarity] = useState("")
+    const [popularity, setPopularity] = useState("")
 
     const handleForm = async (e) => {
         e.preventDefault()
@@ -31,10 +33,10 @@ const SignUp = () => {
             {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    "text": `Act as an API music recommender. I will provide you with artist or bands and you will recommend 3 artist that are very similar to all the artist I give you and not very popular. Avoid artists that have same name as the ones I give you. Reply JSON format with the main property named recommendations. My first request is ${grupo1} and ${grupo2} and the language must be English.`
+                "text": `Act as an API music recommender. I will provide you with artist or bands and you will recommend 3 artist that are ${similarity} all the artist I give you and ${popularity}. Avoid artists that have same name as the ones I give you. Reply JSON format with the main property named recommendations. My first request is ${grupo1} and ${grupo2}.`
 
                 }),
             })
@@ -74,6 +76,26 @@ const SignUp = () => {
         window.location.reload()
     }
 
+    const handleRange = (e, event) =>{
+
+        console.log(e)
+
+        e >= 0 && e < 12 && setSimilarity("different from")
+        e >= 12 && e < 36 && setSimilarity("somewhat similar to")
+        e >= 36 && e < 62 && setSimilarity("fairly similar to")
+        e >= 62 && e < 87 && setSimilarity("very similar to")
+        e >= 87 && e <= 100 && setSimilarity("mostly similar to")
+
+        event >= 0 && event < 15 && setPopularity("not popular at all")
+        event >= 15 && event < 48 && setPopularity("somewhat popular")
+        event >= 48 && event < 78 && setPopularity("quite popular")
+        event >= 78 && event <= 100 && setPopularity("mainstream")
+    }
+
+    const handleCards = async () => {
+        await <><SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} /></>
+    }
+
     return (
         <>
             <div className='login-wrapper'>
@@ -85,6 +107,12 @@ const SignUp = () => {
 
                         <input type="text" name="text" className="input" placeholder="Artist/Band 2" onChange={(e) => setGrupo2(e.currentTarget.value)}></input>
                     </div>
+                    
+                    <p>Similarity</p>
+                    <input type="range" name="similarityInput" min="0" max="100" onChange={(e) => handleRange(e.currentTarget.value)}/>
+
+                    <p>Popularity</p>
+                    <input type="range" name="similarityInput" min="0" max="100" onChange={(event) => handleRange(event.currentTarget.value)}/>
 
                     <button className='mixUpBtn' onClick={(e) => handleForm(e)}>
                         <span className="TxtEffect">Mix up</span>
@@ -98,7 +126,7 @@ const SignUp = () => {
 
            
             {
-                recomendacion3 !== "" && recomendacion2 !== "" && recomendacion1 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />
+                recomendacion3 !== "" && recomendacion2 !== "" && recomendacion1 !== "" && handleCards()
             }
 
          
