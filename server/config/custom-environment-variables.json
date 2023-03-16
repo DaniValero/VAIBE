@@ -1,4 +1,5 @@
 {
   "jwtPrivateKey": "VAIBE_JWT_KEY",
-  "db": "MONGO_URI"
+  "db": "MONGO_URI",
+  "openai": "OPENAI_API"
 }

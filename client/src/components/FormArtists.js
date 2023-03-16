@@ -92,10 +92,6 @@ const SignUp = () => {
         event >= 78 && event <= 100 && setPopularity("mainstream")
     }
 
-    const handleCards = async () => {
-        await <><SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} /></>
-    }
-
     return (
         <>
             <div className='login-wrapper'>
@@ -125,9 +121,7 @@ const SignUp = () => {
             }
 
            
-            {
-                recomendacion3 !== "" && recomendacion2 !== "" && recomendacion1 !== "" && handleCards()
-            }
+            {recomendacion3 !== "" && recomendacion2 !== "" && recomendacion1 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />}
 
          
 

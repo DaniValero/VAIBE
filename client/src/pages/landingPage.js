@@ -17,14 +17,9 @@ const LandingPage = () => {
                     <div className='cardLanding'>
                         <h1 className='title'>The AI powered Recommendation System</h1>
                         <br></br>
-                        <p className='text'>
-                            Ready to find what you were looking for?<br></br><br></br>
-                            With VAIBE you will find those music groups that you once listened to but didn't know
-                            what they were called. Those songs that remind you of those bands you like so much.<br></br><br></br>
-                            We are ready to blow your mind.
-                            And you, are you ready?
-                        </p>
-
+                        <p className='text'>Would you like to try something new?<br></br><br></br>
+                            With VAIBe, you will be able to discover your next favorite band. Our application, powered by artificial intelligence, will allow you to explore new sensations that will make you vibrate.</p>
+                        <p className='text'>We are ready to surprise you. And you, are you ready?</p>
                         {isAuth ?
                             <Link to="/home">
                                 <button className='landingButton'>
@@ -79,19 +74,17 @@ const LandingPage = () => {
                             behind <b>ChatGPT</b> for you to enjoy music like never before.
                         </p>
                         <p>
-                            It's easy. Insert two of your favorite bands, artists or songs, we'll take care of the rest,
+                            It's easy. Insert two of your favorite bands or artists, we'll take care of the rest,
                             it's that simple! You will receive three <b>Spotify</b> recommendations of bands or artists that for sure will
                             surprise you.
                         </p>
                         <p>
-                            VibeAI is an artificial intelligence platform that helps users quickly find the music, band
-                            or artist they are looking for. You will receive a high quality response quickly, so fast
-                            and  so  accurate  that  you won't believe  it.  Thanks  to  <b>AI  technology</b> powered  by
+                            VAIBe is an artificial intelligence platform that helps users quickly find the music, band
+                            or artist they are looking for. You will receive a high quality response. Thanks  to  <b>AI  technology</b> powered  by
                             ChatGPT you will stop wasting time chasing that song, artist or band you want to find
-                            now.<br></br>Start finding and stop searching. That job, VibeAI will do.
-                        </p>
+                            now.<br></br></p>
                         <p>
-                            It seems like magic, yes, but it's <b>VibeAI</b>.
+                            It seems like magic, yes, but it's <b>VAIBe</b>.
                         </p>
                     </div>
                 </div>
