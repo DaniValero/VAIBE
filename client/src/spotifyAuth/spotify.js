@@ -2,7 +2,7 @@ import axios from "axios";
 
 const authEndpoint = "https://accounts.spotify.com/authorize?";
 const clientId = "5c298c2c76ab4c368229572ff9ea7a3e";
-const redirectUri = "http://localhost:3001/home";
+const redirectUri = "https://vaibe.pages.dev/home";
 const scopes = ["user-library-read", "playlist-read-private", "user-top-read"];
 
 export const loginEndpoint = `${authEndpoint}client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(

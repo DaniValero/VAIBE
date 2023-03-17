@@ -1,13 +1,6 @@
 import React from 'react'
-import marcelo1 from '../assets/FullStack/Marcelo.jpeg'
-import marcelo from '../assets/FullStack/Marcelo.png'
-import genesis from '../assets/Data/Genesis.png'
-import guillermo from '../assets/Data/Guillermo.png'
 import dani from '../assets/FullStack/Dani.jpg'
-import antonio from '../assets/Data/Antonio.png'
 import ruben from '../assets/FullStack/Ruben.jpg'
-import mariaAngeles from '../assets/Data/MariaAngeles.jpg'
-
 import "../styles/aboutUs.css"
 
 const AboutUs = () => {
