@@ -22,7 +22,7 @@ To get started with this project, you can follow the steps below:
   npm run dev
 ```
 
-- To start the client naviagate to .\client\ and run 
+- To start the client navigate to .\client\ and run 
 ```bash
   npm start
 ```
