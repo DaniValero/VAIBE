@@ -18,7 +18,7 @@ const EditUserForm = () => {
     useEffect(() => {
 
         const getBusquedas = async () => {
-        await axios.get(`https://vaibe-backend.pages.dev//user/get/${user.getCurrentUser().email}`)
+        await axios.get(`http://localhost:3000/user/get/${user.getCurrentUser().email}`)
           .then((response) => setProfile(response.data))
           .catch((error) => {
               console.error('Error:', error);
