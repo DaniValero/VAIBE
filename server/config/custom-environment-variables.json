@@ -2,8 +2,4 @@
   "jwtPrivateKey": "VAIBE_JWT_KEY",
   "db": "MONGO_URI",
   "openai": "OPENAI_API"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2f4c5f4b6b90191adc8dc4ba358e4e0dc7dc9fcb

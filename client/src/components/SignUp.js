@@ -3,8 +3,8 @@ import user from "../services/userService"
 import { toast } from 'react-toastify'
 import { useNavigate } from "react-router-dom"
 
-import "../styles/styles.css"
-import "../styles/login.css"
+// import "../styles/prueba.css"
+import "../styles/login_styles.css"
 
 const SignUp = () => {
     const [username, setUsername] = useState("")
@@ -109,7 +109,7 @@ const SignUp = () => {
                         </div>
                     </div>
 
-                    <button type="submit" id="buttonRegister" className='sendButton' onClick={(e) => handleForm(e)}> Register
+                    <button type="submit" id="buttonRegister" className='sendButton' onClick={(e) => handleForm(e)}> REGISTER
                     </button>
                 </form>
             </div>

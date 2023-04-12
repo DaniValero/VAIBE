@@ -5,7 +5,6 @@ import AuthConsumer from '../hooks/useAuth'
 import "../styles/landing_styles.css"
 import logoVideo from '../assets/VAIBE_logo_video.mp4'
 
-
 const LandingPage = () => {
     const [{ isAuth }] = AuthConsumer();
 
@@ -40,7 +39,10 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div className='bottomLanding'>
+                {/* POST SCROLL */}
+                
+                <div className='howWork'>       
+
                     <h2>How does it work?</h2>
 
                     <div className='stepsCont'>
@@ -71,16 +73,16 @@ const LandingPage = () => {
                     <div className='textLanding'>
                         <p>
                             We along with our AI powered search engine are going to help you. We bring the power of the model 
-                            behind <b>ChatGPT</b> for you to enjoy music like never before.
+                            behind <b>ChatGPT</b> so you can discover new musical horizons.
                         </p>
                         <p>
                             It's easy. Insert two of your favorite bands or artists, we'll take care of the rest,
-                            it's that simple! You will receive three <b>Spotify</b> recommendations of bands or artists that for sure will
+                            it's that simple! You will receive three <b>Spotify</b> recommendations that for sure will
                             surprise you.
                         </p>
                         <p>
-                            VAIBe is an artificial intelligence platform that helps users quickly find the music, band
-                            or artist they are looking for. You will receive a high quality response. Thanks  to  <b>AI  technology</b> powered  by
+                            VAIBe is an artificial intelligence platform that helps users quickly find the music are looking for. 
+                            You will receive a high quality response. Thanks  to  <b>AI  technology</b> powered  by
                             ChatGPT you will stop wasting time chasing that song, artist or band you want to find
                             now.<br></br></p>
                         <p>

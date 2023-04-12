@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AuthConsumer from "../hooks/useAuth";
+import 'animate.css';
 
-import "../styles/navbar.css"
-import logo from "../assets/VAIBElogo.svg"
+import "../styles/navbar_styles.css"
+import logo from "../assets/VAIBe_logo_alpha.svg"
 
 function Navbar() {
     const [clicked, setClicked] = useState(false)
@@ -14,11 +15,11 @@ function Navbar() {
     return (
         <>
             <nav className="nav">
-                <div className="logo">
-                    <NavLink to="/"><img src={logo} className="App-logo" alt="Logo" />
+                <div className="animate__animated animate__fadeInDown">
+                    <NavLink to="/" ><img src={logo} className="App-logo" alt="VAIBe" />
                     </NavLink>
                 </div>
-                    <div id='menuList'>
+                    <div id='menuList' className="animate__animated animate__fadeInRight">
                         <ul id='navbar' className={clicked ? "#navbar active" : "#navbar"}>
                             {
                                 auth.isAuth ?
