@@ -14,10 +14,20 @@ router.put('/edit/:email', async (req, res) => {
   winston.info(`Usuario editado: ${req.params.email}`)
 })
 
+//MOSTRAR BUSQUEDAS EN EL PERFIL
+
+router.get('/get/:email', async (req, res) => {
+
+  const user = await User.findOne({ email: req.params.email })
+  res.send(user)
+  winston.info(`Búsquedas de usuario: ${req.params.email}`)
+})
+
 // AÑADIR BUSQUEDAS REALIZADAS EN LA v1
 
 router.put('/add-recommendation/:email', async (req, res) => {
-  console.log(req.body)
+  // console.log(req.params.email)
+  // console.log(req.body)
 
   const user = await User.findOneAndUpdate({email: req.params.email}, {$push: {data: req.body}})
   res.send(user)

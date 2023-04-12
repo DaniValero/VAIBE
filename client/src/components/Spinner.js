@@ -1,4 +1,4 @@
-import '../styles/home.css'
+import '../styles/formArtists_styles.css'
 
 export default function Spinner(props) {
     return (

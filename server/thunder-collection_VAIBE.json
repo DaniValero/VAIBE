@@ -1,0 +1,47 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "VAIBE",
+    "dateExported": "2023-03-07T11:31:13.822Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "315cbc9e-26d8-4fa3-ba94-7f684fb5943f",
+            "colId": "feb712c0-ab65-4a91-b6bc-a4305c4f3889",
+            "containerId": "",
+            "name": "Nuevo Usuario",
+            "url": "http://localhost:3000/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-07T11:11:39.423Z",
+            "modified": "2023-03-07T11:27:10.742Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"Dani\",\n  \"email\": \"dani@gmail.com\",\n  \"password\": \"123abc\"\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f9e35400-f691-4afc-b622-cde82b5e167c",
+            "colId": "feb712c0-ab65-4a91-b6bc-a4305c4f3889",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3000/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-07T11:12:55.346Z",
+            "modified": "2023-03-07T11:31:07.238Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"rubenruizganga@gmail.com\",\n  \"password\": \"rrgprueba\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

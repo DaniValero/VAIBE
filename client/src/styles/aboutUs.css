@@ -1,10 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --color1: #140F07;
+    --color2: #5f7162;
+    --color3: #35b937;
+    --color4: #76fe8f;
+    --color5: #c4f6d5;
+    --bg_color: #8BEEC2;
+    --white_color: #FFFFFE;
+    --black_color: #151515;
+    --secundary_color: #142426; 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color1);
+}
+
+
+body {
+    background: radial-gradient(ellipse at center, #8BEEC2 0%, #8BEEC2 35%, #b7e8eb 100%);
+    overflow: hidden;
+}
+  
+  /* ONDAS DEL FONDO */
+  
+.ocean {
+    height: 15%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+    z-index: -999;
+    opacity: 0.5;
+}
+  
+.wave {
+    background: url(../assets/wave.svg) repeat-x;
+    position: absolute;
+    top: -198px;
+    width: 6400px;
+    height: 198px;
+    animation: wave 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+}
+  
+.wave:nth-of-type(2) {
+    top: -175px;
+    animation: wave 13s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 9s ease -1.25s infinite;
+    opacity: 1;
+}
+  
+.wave:nth-of-type(3) {
+    top: -175px;
+    animation: wave 14s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 10s ease -1.25s infinite;
+    opacity: 1;
+}
+  
+@keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+}
+
+  @keyframes swell {
+    0%,
+    100% {
+    transform: translate3d(0, -25px, 0);
+    }
+    50% {
+      transform: translate3d(0, 5px, 0);
+    }
+}
+
+.endWave{
+      display:none;
+}
+
+/* ABOUT US */
+
 .containerCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    row-gap: 30px;
+    margin-top: 50px;
+    /* row-gap: 30px; */
 }
 
+.imgDani{
+    clip-path: polygon(8% 8%, 78% 0, 100% 100%, 12% 91%);
+    display: flex;
+    height: 350px;
+    width: auto;
+    transform: rotate(5deg);
+
+}
+
+.imgRuben{
+    clip-path: polygon(4% 0, 88% 7%, 89% 97%, 12% 100%);
+    display: flex;
+    height: 350px;
+    width: auto;
+
+}
+
+
+/* 
 .card {
     width: 280px;
     height: 320px;
@@ -54,13 +156,4 @@
 
 .card button:hover {
     background: var(--color4);
-}
-
-.titulos {
-    color: var(--color5);
-    text-align: center;
-    font-size: 40px;
-    box-shadow: 0px 0px 5px 1px white;
-    width: 400px;
-    margin: 3% auto;
-}
+} */

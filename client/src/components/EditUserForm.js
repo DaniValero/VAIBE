@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 import user from "../services/userService"
 import axios from 'axios'
-
 import "../styles/profile.css"
 
 const EditUserForm = () => {
@@ -13,43 +12,57 @@ const EditUserForm = () => {
     const users = user.getCurrentUser().data
     const users2 = user.getCurrentUser().data2
     const username = user.getCurrentUser()
+    const [profile, setProfile] = useState({})
 
-    const handleForm = async (e) => {
-        e.preventDefault()
 
-        newPassword === "" && toast.warning("Password is required")
-        newPassword !== newPassword2 && toast.warning("Passwords must match!")
+    useEffect(() => {
 
-        newUsername === "" && setNewUsername(user.getCurrentUser().username)
-        newEmail === "" && setNewEmail(user.getCurrentUser().email)
+        const getBusquedas = async () => {
+        await axios.get(`https://vaibe-backend.pages.dev//user/get/${user.getCurrentUser().email}`)
+          .then((response) => setProfile(response.data))
+          .catch((error) => {
+              console.error('Error:', error);
+          })
+        }
+        getBusquedas()
+        
+    }, [])
 
-        fetch(`http://localhost:3000/user/edit/${user.getCurrentUser().email}`,
-            {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    username: newUsername,
-                    email: newEmail
-                }),
-            })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log('Success:', data) && toast.info("Account information updated successfully")
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            })
-    }
+    // const handleForm = async (e) => {
+    //     e.preventDefault()
+
+    //     newPassword === "" && toast.warning("Password is required")
+    //     newPassword !== newPassword2 && toast.warning("Passwords must match!")
+
+    //     newUsername === "" && setNewUsername(user.getCurrentUser().username)
+    //     newEmail === "" && setNewEmail(user.getCurrentUser().email)
+
+    //     fetch(`http://localhost:3000/user/edit/${user.getCurrentUser().email}`,
+    //         {
+    //             method: 'PUT',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify({
+    //                 username: newUsername,
+    //                 email: newEmail
+    //             }),
+    //         })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //             console.log('Success:', data) && toast.info("Account information updated successfully")
+    //         })
+    //         .catch((error) => {
+    //             console.error('Error:', error);
+    //         })
 
     return (
         <>
             <div>
 
             { (!username.data.length && !username.data2.length) 
-             ? <h1 className='tituloSaludo'>Hey, {username.username}, No recent recommendations...</h1>
-             : <h1 className='tituloSaludo'>Hey, {username.username}, these are your recent recommendations:</h1>                         
+             ? <h1 className='tituloSaludo'>Hello, {username.username}, there are no recent recommendations...</h1>
+             : <h1 className='tituloSaludo'>Hello, {username.username}, these are your recent recommendations:</h1>                         
             }
                 <div className='ContainerProfile'>
                 {users2.reverse().map((e) => (
@@ -68,7 +81,7 @@ const EditUserForm = () => {
                         </div>
                     ))}
 
-                    {users.reverse().map((e) => (
+                    {profile.data? profile.data.reverse().map((e) => (
                         <div className='cardProfile'>
                             <h3 className='details-card'>Artist/Bands</h3>
                             <h4>1: {e.grupo1}</h4>
@@ -78,11 +91,11 @@ const EditUserForm = () => {
                             <h4> 2: {e.recomendacion2}</h4>
                             <h4> 3: {e.recomendacion3}</h4>
                         </div>
-                    ))}
+                    )) : "Loading..."}
                 </div>
 
             </div>
-            <div className='login-wrapper'>
+            {/* <div className='login-wrapper'>
                 <h2 className='login-title'>Edit your information:</h2>
                 <form className='inputbox loginForm'>
                     <div className="inputbox">
@@ -114,7 +127,7 @@ const EditUserForm = () => {
                     </button>
                 </form>
 
-            </div>
+            </div> */}
 
         </>
     );

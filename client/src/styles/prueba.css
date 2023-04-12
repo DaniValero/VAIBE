@@ -1,18 +1,22 @@
+
 .login-wrapper {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 3%;
 }
 
-h1 {
-    color: white;
-    width: fit-content;
+.login-title{
+    width: 100%;
+    /* margin-bottom: 50px; */
+    color: var(--secundary_color);
+    font-size: 32px;
+    box-shadow: none;
 }
+
 
 .inputbox {
     position: relative;
-    width: 196px;
+    width: 300px;
     margin-top: 15px;
     display: flex;
     flex-direction: column;
@@ -27,15 +31,15 @@ h1 {
     outline: none;
     box-shadow: none;
     border: none;
-    color: var(--color3);
-    font-size: 1em;
+    color: var(--secundary_color);
+    font-size: 1.2rem;
     letter-spacing: 0.05em;
     transition: 0.5s;
     z-index: 10;
 }
 
 .inputbox.emailinput {
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .inputbox span {

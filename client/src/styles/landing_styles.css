@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color1);
+    --main-bg-color: #181629;
+    --color1: #140F07;
+    --color2: #5f7162;
+    --color3: #35b937;
+    --color4: #76fe8f;
+    --color5: #c4f6d5;
+    --bg_color: #8BEEC2;
+    --white_color: #FFFFFE;
+    --black_color: #151515;
+    --secundary_color: #142426; 
+}
+
+/* DISEÑO GENERAL */
+
+.allLanding{
+    height: 100vh;
+}
+
+/* 1ª PAGINA */
+
+.bodyLanding {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    background-image: url(../assets/side-wave_background_2.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: relative;
+
+}
+
+/* TEXTO IZQUIERDA */
+
+.cardLanding {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    max-height: 65%;
+    padding: 10px;
+    padding-left: 25px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: var(--white_color);
+}
+
+.text {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: var(--white_color);
+    font-size: 18px;
+}
+
+/* BOTON START */
+
+.landingButton {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    margin-top: 20px;
+    background: linear-gradient(to right, var(--color5), var(--color4), var(--color4));
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.landingButton svg {
+    margin-left: 10px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.landingButton span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.landingButton:hover svg {
+    transform: translateX(5px) rotate(90deg);
+}
+
+.landingButton:hover span {
+    transform: translateX(7px);
+}
+
+/* LOGO */
+
+#logoLanding {
+    width: 300px;
+    position: absolute;
+    top: 5%;
+    right: 8%;
+}
+
+
+/* SEGUNDA PAGINA */
+
+.howWork {
+    margin-top: 100vh;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.howWork h2 {
+    color: var(--secundary_color);
+    font-size: 30px;
+    margin: 5% 0 30px;
+}
+
+.stepsCont {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    padding: 30px;
+    color: white;
+    background-color: var(--secundary_color);
+    border-radius: 30px;
+}
+
+.steps h4 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.steps p {
+    text-align: center;
+}
+
+.arrow {
+    width: 25px;
+    fill: var(--secundary_color);
+}
+
+.textLanding {
+    text-align: center;
+    width: 75%;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
+
+.textLanding p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 769px){
+    .text {
+        text-align: center;
+        margin: 2px;
+        color: var(--color1);
+        font-size: 12px;
+    }
+
+    .bodyLanding {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .howWork h2 {
+        font-size: 25px;
+        margin: 80px 50px; 
+    }
+  
+ 
+}
