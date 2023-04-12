@@ -3,7 +3,6 @@ import React from 'react'
 import dani from '../assets/FullStack/Dani.jpg'
 import ruben from '../assets/FullStack/Ruben.jpg'
 
-
 import "../styles/aboutUs.css"
 
 const AboutUs = () => {

@@ -31,7 +31,7 @@ const FormArtists = () => {
 
             setSearching(true)
 
-            await fetch(`http://localhost:3000/recommendv1`,
+            await fetch(`https://vaibe-backend.pages.dev/recommendv1`,
             {
                 method: 'POST',
                 headers: {
@@ -58,7 +58,7 @@ const FormArtists = () => {
 
     const handleRecommendation = async (e) => {
 
-        await axios.put(`http://localhost:3000/user/add-recommendation/${user.getCurrentUser().email}`,
+        await axios.put(`https://vaibe-backend.pages.dev//user/add-recommendation/${user.getCurrentUser().email}`,
         {
             grupo1: grupo1,
             grupo2: grupo2,
