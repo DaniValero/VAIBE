@@ -20,6 +20,7 @@ const FormArtists = () => {
     const [recomendacion3, setRecomendacion3] = useState("")
     const [similarity, setSimilarity] = useState("")
     const [popularity, setPopularity] = useState("")
+    const [hideForm, setHideForm] = useState(false)
 
     const handleForm = async (e) => {
         e.preventDefault()
@@ -91,10 +92,6 @@ const FormArtists = () => {
         event >= 78 && event <= 100 && setPopularity("mainstream")
     }
 
-    // const handleCards = async () => {
-    //     await <><SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} /></>
-    // }
-
     return (
         <>
         <div className="ocean">
@@ -103,7 +100,7 @@ const FormArtists = () => {
             <div className="wave"></div>
         </div>
 
-            <div className='homeWrapper'>
+            {<div className={hideForm ? 'homeNone' : 'homeWrapper'}>
                 <h1 className='rec-title'>Type two bands or artists</h1>
 
                 <form className='recForm'>
@@ -128,11 +125,11 @@ const FormArtists = () => {
                         <p className='etiquetasInput'>Mainstream</p>
                     </div>
 
-                    <button className='mixUpBtn' onClick={(e) => handleForm(e)}>
+                    <button className='mixUpBtn' onClick={(e) => handleForm(e) && setHideForm(true)}>
                         <span className="TxtEffect">MIX UP</span>
                     </button>
                 </form>
-            </div >
+            </div>}
 
             {
             searching === true && <Spinner loadingText='Let the AI think about it ...' />

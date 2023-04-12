@@ -85,6 +85,10 @@ body {
 
 /* INPUT ARTISTAS */
 
+.homeNone {
+    display: none;
+}
+
 .homeWrapper {
     display: flex;
     align-items: center;
