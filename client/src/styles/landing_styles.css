@@ -13,39 +13,32 @@
     --white_color: #FFFFFE;
     --black_color: #151515;
     --secundary_color: #142426; 
-    
 }
 
+/* DISEÑO GENERAL */
+
+.allLanding{
+    height: 100vh;
+}
+
+/* 1ª PAGINA */
+
 .bodyLanding {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
     display: flex;
     align-items: center;
-    height: 100vh;
     background-image: url(../assets/side-wave_background_2.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    /* background-attachment: fixed; */
-    position: relative;
+    background-attachment: relative;
+
 }
 
-body{
-    overflow-y: scroll;
-}
-
-  
-body::-webkit-scrollbar {
-    width: 16px;
-}
-  
-body::-webkit-scrollbar-track {
-    background-color: var(--black_color);
-    /* border-radius: 100px; */
-}
-  
-body::-webkit-scrollbar-thumb {
-    background-color: var(--secundary_color);
-    /* height: 200px; */
-    border-radius: 100px;
-}
+/* TEXTO IZQUIERDA */
 
 .cardLanding {
     display: flex;
@@ -55,11 +48,9 @@ body::-webkit-scrollbar-thumb {
     max-height: 65%;
     padding: 10px;
     padding-left: 25px;
-    border-radius: 30px;
 }
 
 .title {
-
     text-align: center;
     font-size: 40px;
     color: var(--white_color);
@@ -72,7 +63,8 @@ body::-webkit-scrollbar-thumb {
     font-size: 18px;
 }
 
-/* boton start */
+/* BOTON START */
+
 .landingButton {
     display: flex;
     align-items: center;
@@ -81,12 +73,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 20px;
     padding: 0.8em 1.3em 0.8em 0.9em;
     margin-top: 20px;
-    color: var(--color1);
     background: linear-gradient(to right, var(--color5), var(--color4), var(--color4));
-    /* background: linear-gradient(to right, #0f0c29, #302b63, #24243e); */
     border: none;
     letter-spacing: 0.05em;
-    border-radius: 16px;
+    border-radius: 35px;
     cursor: pointer;
 }
 
@@ -108,27 +98,33 @@ body::-webkit-scrollbar-thumb {
     transform: translateX(7px);
 }
 
-/* logo */
+/* LOGO */
+
 #logoLanding {
-    width: 350px;
+    width: 300px;
     position: absolute;
-    top: 2%;
-    right: 5%;
+    top: 5%;
+    right: 8%;
 }
 
 
-/* segunda pagina */
-.bottomLanding {
-    display: flex;
+/* SEGUNDA PAGINA */
+
+.howWork {
+    margin-top: 100vh;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: none;
     flex-direction: column;
     align-items: center;
     background-color: white;
 }
 
-.bottomLanding h2 {
-    color: var(--color2);
+.howWork h2 {
+    color: var(--secundary_color);
     font-size: 30px;
-    margin: 5% 0 50px;
+    margin: 5% 0 30px;
 }
 
 .stepsCont {
@@ -145,8 +141,8 @@ body::-webkit-scrollbar-thumb {
     width: 25%;
     padding: 30px;
     color: white;
-    background-color: rgb(54, 54, 54);
-    border-radius: 10px;
+    background-color: var(--secundary_color);
+    border-radius: 30px;
 }
 
 .steps h4 {
@@ -163,21 +159,17 @@ body::-webkit-scrollbar-thumb {
     fill: var(--secundary_color);
 }
 
-/* .allLanding {
-    margin-bottom: 200px;
-} */
-
 .textLanding {
     text-align: center;
     width: 75%;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+    margin-top: -30px;
 }
 
 .textLanding p {
     margin-bottom: 20px;
     font-size: 18px;
 }
-
 
 
 @media screen and (max-width: 769px){
@@ -194,7 +186,7 @@ body::-webkit-scrollbar-thumb {
         align-items: center;
     }
     
-    .bottomLanding h2 {
+    .howWork h2 {
         font-size: 25px;
         margin: 80px 50px; 
     }

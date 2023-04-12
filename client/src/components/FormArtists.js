@@ -1,15 +1,17 @@
 import React, { useState, useEffect} from 'react'
 import { toast } from "react-toastify"
 import SpotifyArtist from './SpotifyArtist'
-import "../assets/wrong.svg"
-import "../assets/check.svg"
 import user from "../services/userService"
 import Spinner from "../components/Spinner"
 import axios from 'axios'
 
-import "../styles/home.css"
 
-const SignUp = () => {
+import "../assets/wrong.svg"
+import "../assets/check.svg"
+
+import "../styles/formArtists_styles.css"
+
+const FormArtists = () => {
     const [grupo1, setGrupo1] = useState("")
     const [grupo2, setGrupo2] = useState("")
     const [searching, setSearching] = useState(false)
@@ -88,31 +90,46 @@ const SignUp = () => {
         event >= 48 && event < 78 && setPopularity("quite popular")
         event >= 78 && event <= 100 && setPopularity("mainstream")
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> 2f4c5f4b6b90191adc8dc4ba358e4e0dc7dc9fcb
+    // const handleCards = async () => {
+    //     await <><SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} /></>
+    // }
+
     return (
         <>
-            <div className='login-wrapper'>
-                <h1 className='rec-title'>Type two bands or artists:</h1>
+        <div className="ocean">
+            <div className="wave"></div>
+            <div className="wave"></div>
+            <div className="wave"></div>
+        </div>
+
+            <div className='homeWrapper'>
+                <h1 className='rec-title'>Type two bands or artists</h1>
 
                 <form className='recForm'>
                     <div className='inputArtist'>
-                        <input type="text" name="text" className="input" placeholder="Artist/Band 1" onChange={(e) => setGrupo1(e.currentTarget.value)}></input>
+                        <input type="text" name="text" className="inputText" placeholder="First Artist/Band" onChange={(e) => setGrupo1(e.currentTarget.value)}></input>
 
-                        <input type="text" name="text" className="input" placeholder="Artist/Band 2" onChange={(e) => setGrupo2(e.currentTarget.value)}></input>
+                        <input type="text" name="text" className="inputText" placeholder="Second Artist/Band" onChange={(e) => setGrupo2(e.currentTarget.value)}></input>
+                    </div>
+
+                    <p className='tituloRangos'>SIMILARITY</p>
+                    <div className='sliderCaja'>
+                        <p className='etiquetasInput'>Different</p>
+                        <input type="range" className="similarityInput" min="0" max="100" onChange={(e) => handleRange(e.currentTarget.value)}/>
+                        <p className='etiquetasInput'>Similar</p>
                     </div>
                     
-                    <p>Similarity</p>
-                    <input type="range" name="similarityInput" min="0" max="100" onChange={(e) => handleRange(e.currentTarget.value)}/>
 
-                    <p>Popularity</p>
-                    <input type="range" name="similarityInput" min="0" max="100" onChange={(event) => handleRange(event.currentTarget.value)}/>
+                    <p className='tituloRangos'>POPULARITY</p>
+                    <div className='sliderCaja'>
+                        <p className='etiquetasInput'>Underground</p>
+                        <input type="range" className="popularityInput" min="0" max="100" onChange={(event) => handleRange(event.currentTarget.value)}/>
+                        <p className='etiquetasInput'>Mainstream</p>
+                    </div>
 
                     <button className='mixUpBtn' onClick={(e) => handleForm(e)}>
-                        <span className="TxtEffect">Mix up</span>
+                        <span className="TxtEffect">MIX UP</span>
                     </button>
                 </form>
             </div >
@@ -121,16 +138,11 @@ const SignUp = () => {
             searching === true && <Spinner loadingText='Let the AI think about it ...' />
             }
 
-<<<<<<< HEAD
            
             {recomendacion3 !== "" && recomendacion2 !== "" && recomendacion1 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />}
 
          
 
-=======
-            {recomendacion3 !== "" && <SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} />}
-    
->>>>>>> 2f4c5f4b6b90191adc8dc4ba358e4e0dc7dc9fcb
             {
                 recomendacion3 && <div className="likeordislike">
                     <button className="like btnLike" onClick={(e) => handleRecommendation(e)} value="true">
@@ -146,4 +158,4 @@ const SignUp = () => {
     );
 }
 
-export default SignUp;
+export default FormArtists;

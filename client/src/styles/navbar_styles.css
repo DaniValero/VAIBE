@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--color1);
+    --main-bg-color: #181629;
+    --color1: #140F07;
+    --color2: #5f7162;
+    --color3: #35b937;
+    --color4: #76fe8f;
+    --color5: #c4f6d5;
+    --bg_color: #8BEEC2;
+    --white_color: #FFFFFE;
+    --black_color: #151515;
+    --secundary_color: #142426; 
+}
+
+.App-logo {
+    margin-left: 25px;
+    margin-top: 30px;
+    height: 60px;
+    width: auto;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black_color);
+}
+
+
+#navbar li {
+    list-style: none;
+    position: relative;
+    height: 100%;
+    display: flex;
+}
+
+#navbar li a {
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--secundary_color);
+    transition: 600ms ease-in-out;
+    padding: 0 20px 0 20px;
+    margin: 0 10px;
+}
+
+#navbar li a:hover {
+    transition: 100ms ease-in-out;
+    background-color: transparent;
+    color: var(--secundary_color);
+    border: 2px solid var(--secundary_color);
+    border-radius: 20px;
+}
+
+#navbar li a.active {
+    background-color: var(--secundary_color);
+    color: var(--white_color);
+    border-radius: 20px;
+}
+
+#menuList {
+    height: 35px;
+    display: flex;
+    margin-right: 2%;
+}

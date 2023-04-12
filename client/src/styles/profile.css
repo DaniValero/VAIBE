@@ -96,28 +96,3 @@
 .input-title{
     margin-bottom: -10px;
 }
-
-/* formulario */
-.login-title {
-    color: white;
-    text-align: center;
-    font-size: 25px;
-    box-shadow: 0px 0px 5px 1px white;
-    width: 400px;
-    margin: 2%;
-    padding: 15px;
-}
-
-.loginForm {
-    width: 50%;
-    display: grid;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: 80px 80px;
-    column-gap: 10%;
-    row-gap: 15px;
-    justify-items: center;
-    grid-template-areas:
-        "input1 input2"
-        "input3 input4"
-        "btn btn";
-}

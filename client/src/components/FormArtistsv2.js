@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Spotify from "react-spotify-embed";
-import "../styles/home.css"
-import "../styles/login.css"
+import "../styles/formArtists_styles.css"
+import "../styles/login_styles.css"
 import "../styles/home_v2.css"
 import user from "../services/userService"
 import axios from 'axios';
