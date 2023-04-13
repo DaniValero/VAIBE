@@ -3,7 +3,7 @@ import http from "./httpService";
 import config from "../config.json";
 import { toast } from "react-toastify";
 
-const apiURL = "https://vaibe-backend.pages.dev/";
+const apiURL = "http://localhost:3000";
 const tokenProperty = "token";
 
 

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import AuthConsumer from "../hooks/useAuth";
-import 'animate.css';
 
 import "../styles/navbar_styles.css"
 import logo from "../assets/VAIBe_logo_alpha.svg"
