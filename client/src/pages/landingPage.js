@@ -8,6 +8,8 @@ import logoVideo from '../assets/VAIBE_logo_video.mp4'
 const LandingPage = () => {
     const [{ isAuth }] = AuthConsumer();
 
+    window.localStorage.removeItem("spotyToken");
+
     return (
         <>
             <div className='allLanding'>

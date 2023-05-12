@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
     "config": "^3.3.8",
     "cors": "^2.8.5",
@@ -22,6 +23,7 @@
     "lodash": "^4.17.21",
     "mongoose": "^6.8.3",
     "openai": "^3.2.1",
+    "qs": "^6.11.1",
     "winston": "^3.8.2",
     "winston-mongodb": "^5.1.0"
   },

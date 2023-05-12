@@ -8,6 +8,7 @@ const login = require('../routes/auth')
 const user = require('../routes/user')
 const registro = require('../routes/registro')
 const recommendv1 = require('../routes/recommendv1')
+const spotifyRequests = require('../routes/spotifyRequest')
 const errors = require('../middleware/errors')
 
 
@@ -23,6 +24,7 @@ module.exports = function (app) {
     app.use('/signup', registro)
     app.use('/user', user)
     app.use('/recommendv1', recommendv1)
+    app.use('/results', spotifyRequests)
     
 
 //PING

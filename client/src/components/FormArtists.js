@@ -20,6 +20,7 @@ const FormArtists = () => {
     const [recomendacion3, setRecomendacion3] = useState("")
     const [similarity, setSimilarity] = useState("")
     const [popularity, setPopularity] = useState("")
+    const [hideForm, setHideForm] = useState(false)
 
     const handleForm = async (e) => {
         e.preventDefault()
@@ -91,10 +92,6 @@ const FormArtists = () => {
         event >= 78 && event <= 100 && setPopularity("mainstream")
     }
 
-    // const handleCards = async () => {
-    //     await <><SpotifyArtist artist={recomendacion1} artist2={recomendacion2} artist3={recomendacion3} /></>
-    // }
-
     return (
         <>
         <div className="ocean">
@@ -103,7 +100,7 @@ const FormArtists = () => {
             <div className="wave"></div>
         </div>
 
-            <div className='homeWrapper'>
+            {<div className={hideForm ? 'homeNone' : 'homeWrapper'}>
                 <h1 className='rec-title'>Type two bands or artists</h1>
 
                 <form className='recForm'>
@@ -128,11 +125,11 @@ const FormArtists = () => {
                         <p className='etiquetasInput'>Mainstream</p>
                     </div>
 
-                    <button className='mixUpBtn' onClick={(e) => handleForm(e)}>
+                    <button className='mixUpBtn' onClick={(e) => handleForm(e) && setHideForm(true)}>
                         <span className="TxtEffect">MIX UP</span>
                     </button>
                 </form>
-            </div >
+            </div>}
 
             {
             searching === true && <Spinner loadingText='Let the AI think about it ...' />
@@ -144,13 +141,17 @@ const FormArtists = () => {
          
 
             {
-                recomendacion3 && <div className="likeordislike">
-                    <button className="like btnLike" onClick={(e) => handleRecommendation(e)} value="true">
-                        <svg height="24" width="24" xmlns={"../assets/check.svg"} viewBox="0 0 512 512"><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" /></svg>
-                    </button>
-                    <button className="dislike btnLike" onClick={(e) => window.location.reload(e)} value="false">
-                        <svg height="24" width="24" xmlns={"../assets/wrong.svg"} viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" /></svg>
-                    </button>
+                recomendacion3 && 
+                <div className='like-wrapper'>
+                    <h3 className='like-title'>Do you want to save this recommendation?</h3>
+                    <div className="likeordislike">
+                        <button className="like btnLike" onClick={(e) => handleRecommendation(e)} value="true">
+                            <svg height="24" width="24" xmlns={"../assets/check.svg"} viewBox="0 0 512 512"><path d="M470.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L192 338.7 425.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" /></svg>
+                        </button>
+                        <button className="dislike btnLike" onClick={(e) => window.location.reload(e)} value="false">
+                            <svg height="24" width="24" xmlns={"../assets/wrong.svg"} viewBox="0 0 320 512"><path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" /></svg>
+                        </button>
+                    </div>
                 </div>
             }
 
