@@ -308,6 +308,16 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 /* buttons like/dislike */
+
+.like-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.like-title {
+    margin: 10px auto;
+}
 .likeordislike {
     display: flex;
     justify-content: center;

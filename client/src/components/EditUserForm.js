@@ -28,34 +28,6 @@ const EditUserForm = () => {
         
     }, [])
 
-    // const handleForm = async (e) => {
-    //     e.preventDefault()
-
-    //     newPassword === "" && toast.warning("Password is required")
-    //     newPassword !== newPassword2 && toast.warning("Passwords must match!")
-
-    //     newUsername === "" && setNewUsername(user.getCurrentUser().username)
-    //     newEmail === "" && setNewEmail(user.getCurrentUser().email)
-
-    //     fetch(`http://localhost:3000/user/edit/${user.getCurrentUser().email}`,
-    //         {
-    //             method: 'PUT',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({
-    //                 username: newUsername,
-    //                 email: newEmail
-    //             }),
-    //         })
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             console.log('Success:', data) && toast.info("Account information updated successfully")
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error:', error);
-    //         })
-
     return (
         <>
             <div>
@@ -95,39 +67,6 @@ const EditUserForm = () => {
                 </div>
 
             </div>
-            {/* <div className='login-wrapper'>
-                <h2 className='login-title'>Edit your information:</h2>
-                <form className='inputbox loginForm'>
-                    <div className="inputbox">
-                        <input autoComplete='true' type="text" id="username" name="username" onChange={(e) => setNewUsername(e.currentTarget.value)} />
-                        <span className='input-title'>Username</span>
-                        <i></i>
-                    </div>
-
-                    <div className="inputbox">
-                        <input autoComplete='true' type="email" id="email" name="email" onChange={(e) => setNewEmail(e.currentTarget.value)} />
-                        <span className='input-title'>Email</span>
-                        <i></i>
-                    </div>
-
-                    <div className="inputbox">
-                        <input autoComplete='true' type="password" id="password" name="password" onChange={(e) => setNewPassword(e.currentTarget.value)} />
-                        <span className='input-title'>Password</span>
-                        <i></i>
-                    </div>
-
-                    <div className="inputbox">
-                        <input autoComplete='true' type="password" id="password2" name="password" onChange={(e) => setNewPassword2(e.currentTarget.value)} />
-                        <span className='input-title'>Repeat password</span>
-                        <i></i>
-                    </div>
-
-                    <button type="submit" id='btnEdit' onClick={(e) => handleForm(e)}>
-                        Edit user
-                    </button>
-                </form>
-
-            </div> */}
 
         </>
     );

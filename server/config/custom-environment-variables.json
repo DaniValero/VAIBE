@@ -1,5 +1,7 @@
 {
   "jwtPrivateKey": "VAIBE_JWT_KEY",
   "db": "MONGO_URI",
-  "openai": "OPENAI_API"
+  "openai": "OPENAI_API",
+  "spotifyClient": "SPOTIFY_API_ID",
+  "spotifySecret": "SPOTIFY_CLIENT_SECRET"
 }

@@ -1,5 +1,7 @@
 {
   "jwtPrivateKey": "",
   "db": "",
-  "openai": ""
+  "openai": "",
+  "spotifyClient": "",
+  "spotifySecret": ""
 }

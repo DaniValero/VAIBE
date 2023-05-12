@@ -1,11 +1,11 @@
 import React from 'react'
-import HomeSpoty from "../components/HomeSpoty"
+import FormArtists from '../components/FormArtists';
 
 
 const Home = () => {
   return (
     <>
-      <HomeSpoty />
+      <FormArtists/>
     </>
   );
 };
