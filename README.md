@@ -9,7 +9,7 @@ It integrates Spotify to instantly listen to the recommended artists and has a r
 
 ![image](https://user-images.githubusercontent.com/114396949/236613951-e462ab5e-fbfe-4aa8-8c81-3a7c6e829a13.png)
 
-![image](https://user-images.githubusercontent.com/114396949/236613894-3c1ec90b-a352-4604-ad50-f133c74bd888.png)
+![image](https://github.com/DaniValero/VAIBE/assets/114396949/7b081d11-7937-4bb4-99c1-1835c05b3cba)
 
 
 
