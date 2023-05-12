@@ -42,6 +42,10 @@ You will need to add the following environment variables to your .env file
 
 `OPENAI_API=<YOUR_CHATGPT_API_KEY>`
 
+`SPOTIFY_API_ID=<YOUR_SPOTIFY_DEVELOPER_ID>`
+
+`SPOTIFY_CLIENT_SECRET=<YOUR_SPOTIFY_DEVELOPER_SECRET>`
+
 ## Authors
 
 - [@DaniValero](https://github.com/DaniValero)
